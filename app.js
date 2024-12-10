@@ -5,11 +5,13 @@ const PORT = process.env.PORT || '3001'
 
 const MoviesRoutes = require('./routes/movies')
 
-// Movies Routes
+// Routes
 server.get('/', (req, res) => {
     res.send(`Server is up and running!`);
 })
 
+
+// Movies Routes
 server.use('/api/movies', MoviesRoutes )
 
 server.listen(PORT, () => {
