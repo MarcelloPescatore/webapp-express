@@ -9,7 +9,7 @@ const NotFound = require('./middlewares/NotFound')
 const ServerErrorHandler = require('./middlewares/ServerErrorHandler')
 
 // Abilita CORS per tutte le richieste
-app.use(cors());
+server.use(cors());
 
 // Routes
 server.get('/', (req, res) => {
