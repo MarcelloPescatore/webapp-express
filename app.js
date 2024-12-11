@@ -2,11 +2,14 @@ const express = require('express')
 const server = express()
 const HOST = process.env.HOST || 'http://localhost'
 const PORT = process.env.PORT || '3001'
+const cors = require('cors');
 
 const MoviesRoutes = require('./routes/movies')
 const NotFound = require('./middlewares/NotFound')
 const ServerErrorHandler = require('./middlewares/ServerErrorHandler')
 
+// Abilita CORS per tutte le richieste
+app.use(cors());
 
 // Routes
 server.get('/', (req, res) => {
