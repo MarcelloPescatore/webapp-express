@@ -8,6 +8,9 @@ const MoviesRoutes = require('./routes/movies')
 const NotFound = require('./middlewares/NotFound')
 const ServerErrorHandler = require('./middlewares/ServerErrorHandler')
 
+// middleware per il parse
+server.use(express.json())
+
 // Abilita CORS per tutte le richieste
 server.use(cors({
     origin: process.env.WEB_APP_ORIGIN_FRONT
