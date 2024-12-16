@@ -19,7 +19,7 @@ function show (req, res) {
     const sql = `SELECT * FROM movies WHERE id = ?`
 
     //recupero le recensioni del film
-    const reviewSql = `SELECT * FROM reviews WHERE movie_id = ?`
+    const reviewSql = `SELECT * FROM reviews WHERE movie_id = ? ORDER BY id DESC`
 
     // recupero il film associato a quell'id
     connection.query(sql, [id], (err, results) => {
